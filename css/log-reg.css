@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 body{
     height: 100vh;
@@ -98,6 +99,9 @@ body{
     font-size: 14px;
 }
 @media screen and (max-width:798px){
+    body{
+        height: 96vh;
+    }
     .container{
         width: 280px;
     }
