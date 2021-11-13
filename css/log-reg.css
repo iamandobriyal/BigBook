@@ -29,6 +29,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .logo h1,h2{
     font-size: 26px;

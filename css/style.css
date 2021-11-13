@@ -285,6 +285,9 @@ price{
     padding-top: 20px;
     padding-bottom: 20px;
 }
+.footer .lower p{
+    font-size: 14px;
+}
 #home{
     display: flex;
     flex-direction: column;
@@ -363,11 +366,12 @@ price{
     display: none;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
+    margin-bottom: -50px;
 }
 #contact .container{
     display: flex;
     flex-direction: row;
-    margin-bottom: -120px;
     column-gap: 100px;
 }
 #contact h1{
@@ -400,6 +404,71 @@ price{
 }
 section{
     animation: reveal 300ms linear;
+}
+product{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 100px;
+    margin-bottom: -100px;
+    margin-top: 50px;
+}
+product .right{
+    display: flex;
+    flex-direction: column;
+}
+product img{
+    height: 350px;
+}
+product .buttons{
+    display: flex;
+    column-gap: 20px;
+    margin-top: 40px;
+}
+product .qty{
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+product .qty .rem,.add{
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+product .qty .add:active{
+    transform: scale(1.10);
+}
+product .qty .rem:active{
+    transform: scale(1.10);
+}
+product .buynow,.cartbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 130px;
+    background-color: transparent;
+    border: 3px solid #017865;
+    cursor: pointer;
+}
+product .buynow:hover{
+    background-color: #017865;
+    color: white;
+}
+product .cartbtn:hover{
+    background-color: orange;
+    color: white;
+}
+product .cartbtn
+{
+    border: 3px solid orange;
 }
 @keyframes reveal {
     0%{
@@ -534,6 +603,13 @@ section{
     #shop .container .item{
         width: 180px;
         height: 200px;
+    }
+    product .right{
+        margin-top: 10px;
+        align-items: center;
+    }
+    product .buttons{
+        margin-top: 20px;
     }
 }
 

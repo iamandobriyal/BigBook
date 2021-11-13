@@ -6,6 +6,10 @@ let buttons = document.querySelectorAll('button');
 let fields = document.querySelectorAll('input');
 let forget = document.querySelector('#fr');
 let stch = document.querySelector('.switch');
+let logo = document.querySelector('.logo');
+logo.onclick = function(){
+    location.href = "../index.html";
+}
 signupbtn.addEventListener('click',function()
 {
     signupbtn.classList.add('active');
