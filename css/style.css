@@ -315,6 +315,7 @@ price{
     }
     .mobilenav{
         display: none;
+        flex-direction: column;
         align-items: center;
         background-color: white;
         position: fixed;
@@ -326,6 +327,14 @@ price{
         z-index: 10;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         animation: menu 500ms linear;
+    }
+    .mobilenav button{
+        margin-top: 30px;
+        width: 80px;
+        height: 30px;
+        background-color: transparent;
+        border: 3px solid #017865;
+        cursor: pointer;
     }
     @keyframes menu {
         0%{
