@@ -391,6 +391,7 @@ price{
     background-color: transparent;
     border: none;
     outline: none;
+    border-bottom: 2px solid silver;
 }
 #contact .container form button{
     height: 40px;
