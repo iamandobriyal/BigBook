@@ -91,6 +91,12 @@ body{
 #register{
     display: none;
 }
+#forget{
+    display: none;
+}
+#forget span{
+    font-size: 14px;
+}
 @media screen and (max-width:798px){
     .container{
         width: 280px;

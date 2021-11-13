@@ -535,9 +535,6 @@ section{
         width: 180px;
         height: 200px;
     }
-    #shop .container .item .details{
-
-    }
 }
 
 @media screen and (max-width:390px)
