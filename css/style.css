@@ -184,7 +184,6 @@ body{
     font-size: 10px;
 }
 price{
-    margin-top: 20px;
     color: #017865;
     font-size: 14px;
     font-weight: 800;
@@ -300,7 +299,7 @@ price{
 }
 #shop .container{
     row-gap: 150px;
-    column-gap: 80px;
+    column-gap: 50px;
     padding: 0px 60px 0px 60px;
 }
 #shop .container .item{
@@ -309,8 +308,8 @@ price{
     text-align: center;
     align-items: center;
     border-radius: 20px;
-    height: 200px;
-    width: 160px;
+    height: 220px;
+    width: 180px;
     cursor: pointer;
     transition: all 200ms linear;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -321,10 +320,13 @@ price{
     border-radius: 20px 20px 0px 0px;
 }
 #shop .container .item .details{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     background-color: white;
     padding: 10px;
     border-radius: 0px 0px 20px 20px;
+    align-items: center;
 }
 #shop .container .item .details p{
     font-size: 12px;
@@ -332,7 +334,8 @@ price{
 #shop .container .item .details button{
     background-color: transparent;
     border: 3px solid #017865;
-    padding: 5px 10px 5px 10px;
+    padding: 5px;
+    width: 100px;
     cursor: pointer;
 }
 #shop .container .item .details button:hover{
@@ -523,4 +526,27 @@ section{
     #about .content p{
         font-size: 12px;
     }
+    #shop .container{
+        padding: 10px;
+        column-gap: 10px;
+    }
+    #shop .container .item{
+        width: 180px;
+        height: 200px;
+    }
+    #shop .container .item .details{
+
+    }
+}
+
+@media screen and (max-width:390px)
+{
+    #shop .container .item{
+        width: 150px;
+        height: 170px;
+    }
+    .pop{
+        width: 130px;
+        height: 150px;
+    } 
 }
