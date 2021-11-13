@@ -25,7 +25,7 @@ overlay.addEventListener('click',function(){
 for(let i=0; i<loginBtn.length; i++)
 {
     loginBtn[i].addEventListener('click',function(){
-        location.href = "../pages/login.html";
+        location.href = "/BigBook/pages/login.html";
     })
 }
 for(let i=0; i<nav.length; i++)
