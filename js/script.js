@@ -6,7 +6,10 @@ let loginBtn = document.querySelectorAll('#login-btn');
 let nav = document.querySelectorAll('li');
 let section = document.querySelectorAll('section');
 let shopbtn = document.querySelector('#shopnow');
-
+let logo = document.querySelector('.logo');
+logo.onclick = function(){
+    location.href = "index.html";
+}
 
 ham.addEventListener('click',function()
 {
