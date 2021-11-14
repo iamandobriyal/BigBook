@@ -8,7 +8,15 @@ let section = document.querySelectorAll('section');
 let shopbtn = document.querySelector('#shopnow');
 let logo = document.querySelector('.logo');
 let books = document.querySelectorAll('.book');
+let cart = document.querySelectorAll('#cart');
 
+for(let i=0; i<cart.length; i++)
+{
+    cart[i].addEventListener('click',function()
+    {
+        location.href = '../pages/cart.html';
+    })
+}
     for(let i=0; i<books.length; i++)
     {
         books[i].addEventListener('click',function()
