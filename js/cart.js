@@ -5,8 +5,9 @@ let details = [];
 let bookname = [];
 let author = [];
 let total = [];
-let closebtn = [];
+var closebtn = [];
 var n = 0;
+let text = document.querySelector('h3');
 window.onload = function()
 {
             newItem[n] = document.createElement('div');
@@ -35,4 +36,9 @@ window.onload = function()
             details[n].appendChild(bookname[n]);
             details[n].appendChild(author[n]);
             details[n].appendChild(total[n]);
+            closebtn[0].addEventListener('click',function(){
+                newItem[0].remove();
+                text.textContent = "Your cart is empty";
+            })
 }
+    
