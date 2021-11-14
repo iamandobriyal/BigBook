@@ -18,6 +18,7 @@ let books = document.querySelectorAll('.book');
             localStorage.setItem('imagesrc',bookChildren[0].src);
             localStorage.setItem('bookname',bookDetails[0].textContent);
             localStorage.setItem('authorname',bookDetails[1].textContent);
+            localStorage.setItem('price',bookDetails[2].textContent)
             window.open('../pages/product.html');
         })
     }
