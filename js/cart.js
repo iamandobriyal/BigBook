@@ -6,15 +6,9 @@ let bookname = [];
 let author = [];
 let total = [];
 let closebtn = [];
-
+var n = 0;
 window.onload = function()
 {
-        let imgsrc = JSON.parse(localStorage.getItem('imagesrcarr'));
-        let bookName = JSON.parse(localStorage.getItem('booknamearr'));
-        let authorName = JSON.parse(localStorage.getItem('authornamearr'));
-        let price = JSON.parse(localStorage.getItem('pricearr'));
-        for(let n=0; n<imgsrc; n++)
-        {
             newItem[n] = document.createElement('div');
             newItem[n].classList.add('product');
             img[n] = document.createElement('img');
@@ -41,5 +35,4 @@ window.onload = function()
             details[n].appendChild(bookname[n]);
             details[n].appendChild(author[n]);
             details[n].appendChild(total[n]);
-        }
 }
