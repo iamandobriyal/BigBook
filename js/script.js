@@ -7,41 +7,24 @@ let nav = document.querySelectorAll('li');
 let section = document.querySelectorAll('section');
 let shopbtn = document.querySelector('#shopnow');
 let logo = document.querySelector('.logo');
-let rem = document.querySelector('.rem');
-let add = document.querySelector('.add');
-let qty = document.querySelector('#qty');
 let books = document.querySelectorAll('.book');
-let productPage = document.querySelector('product');
-let productImage = document.querySelector('#prd');
-let productDetail = document.querySelector('.right').children;
 
-for(let i=0; i<books.length; i++)
-{
-    books[i].addEventListener('click',function(){
-        location.href = '#header';
-        for(let i=0; i<section.length; i++)
+    for(let i=0; i<books.length; i++)
+    {
+        books[i].addEventListener('click',function()
         {
-            section[i].style.display = "none";
-        }
-        let bookChildren = books[i].children;
-        let bookDetails = bookChildren[1].children;
-        console.log(bookChildren);
-        productImage.src = bookChildren[0].src;
-        productDetail[0].textContent = bookDetails[0].textContent;
-        productDetail[1].textContent = bookDetails[1].textContent;
-        productPage.style.display = "flex";
-    })
-}
+            let bookChildren = books[i].children;
+            let bookDetails = bookChildren[1].children;
+            localStorage.setItem('imagesrc',bookChildren[0].src);
+            localStorage.setItem('bookname',bookDetails[0].textContent);
+            localStorage.setItem('authorname',bookDetails[1].textContent);
+            window.open('../pages/product.html');
+        })
+    }
 
 logo.onclick = function(){
     location.href = "index.html";
 }
-
-ham.addEventListener('click',function()
-{
-    mobMenu.style.display = "flex";
-    overlay.style.display = "block";
-})
 close.addEventListener('click',function()
 {
     mobMenu.style.display = "none";
@@ -88,16 +71,8 @@ shopbtn.addEventListener('click',function(){
     section[0].style.display = "none";
     section[1].style.display = "flex";
 })
-
-add.addEventListener('click',function(){
-    if(parseInt(qty.textContent)<10)
-    {
-        qty.textContent = parseInt(qty.textContent) + 1;
-    }
-})
-rem.addEventListener('click',function(){
-    if(parseInt(qty.textContent)>1)
-    {
-        qty.textContent = parseInt(qty.textContent) - 1;
-    }
+ham.addEventListener('click',function()
+{
+    mobMenu.style.display = "flex";
+    overlay.style.display = "block";
 })

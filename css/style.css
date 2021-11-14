@@ -406,7 +406,7 @@ section{
     animation: reveal 300ms linear;
 }
 product{
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
