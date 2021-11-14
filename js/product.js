@@ -1,7 +1,4 @@
 
-    var qty = document.querySelector('#qty');
-    var rem = document.querySelector('.rem');
-    var add = document.querySelector('.add');
     var productImage = document.querySelector('#prd');
     var productDetail = document.querySelector('.right').children;
     let cartbtn = document.querySelector('.cartbtn');
@@ -9,33 +6,29 @@
     productDetail[0].textContent = localStorage.getItem('bookname');
     productDetail[1].textContent = localStorage.getItem('authorname');
     productDetail[2].textContent = localStorage.getItem('price');
-
+    var imagesrcarr = [];
+    var booknamearr = [];
+    var authornamearr = [];
+    var pricearr = [];
+    var popUp = document.querySelector('.pop-up');
     document.querySelector('.logo').addEventListener('click',function(){
         location.href = '../pages/index.html';
     })
-    add.addEventListener('click',function(){
-        if(parseInt(qty.textContent)<10)
-        {
-            qty.textContent = parseInt(qty.textContent) + 1;
-        }
-    })
-    rem.addEventListener('click',function(){
-        if(parseInt(qty.textContent)>1)
-        {
-            qty.textContent = parseInt(qty.textContent) - 1;
-        }
-    })
-    var k =1;
     cartbtn.onclick = function()
     {
-        localStorage.setItem('imagesrc',productImage.src);
-        localStorage.setItem('bookname',productDetail[0].textContent);
-        localStorage.setItem('qty',qty.textContent);
-        localStorage.setItem('authorname',productDetail[1].textContent);
-        localStorage.setItem('price',productDetail[2].textContent);
-        localStorage.setItem('id',k);
-        k++;
-        location.href = '../pages/cart.html';
+            
+            imagesrcarr[0] = productImage.src;
+            booknamearr[0] = productDetail[0].textContent;
+            authornamearr[0] = productDetail[1].textContent;
+            pricearr[0] = productDetail[2].textContent;
+            localStorage.setItem('imagesrcarr',JSON.stringify(imagesrcarr));
+            localStorage.setItem('booknamearr',JSON.stringify(booknamearr));
+            localStorage.setItem('authornamearr',JSON.stringify(authornamearr));
+            localStorage.setItem('pricearr',JSON.stringify(pricearr));
+            popUp.style.display = "flex";
+            setInterval(function(){
+                popUp.style.display = "none";
+            },3000)
     }
     
     

@@ -191,7 +191,7 @@ price{
 .newsletter{
     background-color: black;
     display: flex;
-    margin-top: 150px;
+    margin-top: 100px;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -304,6 +304,7 @@ price{
     row-gap: 150px;
     column-gap: 50px;
     padding: 0px 60px 0px 60px;
+    margin-bottom: 50px;
 }
 #shop .container .item{
     display: flex;
@@ -311,8 +312,8 @@ price{
     text-align: center;
     align-items: center;
     border-radius: 20px;
-    height: 220px;
-    width: 180px;
+    height: 200px;
+    width: 160px;
     cursor: pointer;
     transition: all 200ms linear;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -349,7 +350,7 @@ price{
     display: none;
     flex-direction: column;
     align-items: center;
-    margin-bottom: -130px;
+    margin-top: 50px;
 }
 #about .content{
     display: flex;
@@ -367,7 +368,6 @@ price{
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-    margin-bottom: -50px;
 }
 #contact .container{
     display: flex;
@@ -410,9 +410,17 @@ product{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    column-gap: 100px;
-    margin-bottom: -100px;
     margin-top: 50px;
+}
+product .container{
+    display: flex;
+    background-color: white;
+    width: 1000px;
+    height: 100%;
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    column-gap: 60px;
+    justify-content: center;
 }
 product .right{
     display: flex;
@@ -473,6 +481,32 @@ product .cartbtn
 product price{
     margin-top: 10px;
     font-size: 20px;
+}
+.pop-up{
+    display: none;
+    background-color: #017865;
+    position: absolute;
+    height: 60px;
+    width: 300px;
+    align-items: center;
+    color: white;
+    top: 2%;
+    left: 5%;
+    margin: 0 auto;
+    justify-content: center;
+    column-gap: 10px;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    animation: reveal 200ms linear;
+}
+.pop-up button{
+    background-color: transparent;
+    color: white;
+    height: 40px;
+    width: 100px;
+    border: 2px solid white;
+    border-radius: 20px;
+    cursor: pointer;
 }
 @keyframes reveal {
     0%{
@@ -617,6 +651,14 @@ product price{
     }
     product .right h1{
         font-size: 24px;
+    }
+    product .container{
+        width: 400px;
+    }
+    .pop-up{
+        display: none;
+        top: 40%;
+        left: 5%;
     }
 }
 

@@ -9,7 +9,15 @@ let shopbtn = document.querySelector('#shopnow');
 let logo = document.querySelector('.logo');
 let books = document.querySelectorAll('.book');
 let cart = document.querySelectorAll('#cart');
+var k = 0;
+localStorage.setItem('num',k);
 
+for(let i=6; i<books.length; i++)
+{
+    let bookChildren = books[i].children;
+    let bookDetails = bookChildren[1].children;
+    bookDetails[3].style.display = "none";
+}
 for(let i=0; i<cart.length; i++)
 {
     cart[i].addEventListener('click',function()
