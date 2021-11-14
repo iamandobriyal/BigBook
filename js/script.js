@@ -40,7 +40,7 @@ for(let i=0; i<cart.length; i++)
     }
 
 logo.onclick = function(){
-    location.href = "index.html";
+    location.href = "../index.html";
 }
 close.addEventListener('click',function()
 {
