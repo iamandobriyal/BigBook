@@ -79,3 +79,21 @@ h1{
     color: white;
     transform: scale(1.2);
 }
+@media screen and (max-width:798px){
+    .product{
+        width: 280px;
+    }
+    .name{
+        font-size: 14px;
+    }
+    .author{
+        font-size: 10px;
+    }
+    .qty{
+        font-size: 10px;
+    }
+    .total{
+        font-size: 12px;
+        font-weight: 800;
+    }
+}
